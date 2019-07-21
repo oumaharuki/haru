@@ -1,0 +1,15 @@
+{
+    "http": {
+        "port": 10001
+    },"dbs": [{
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "",
+        "database": "dbtest",
+        "max_conn": 10,
+        "max_idle": 10,
+        "life_time": 3600,
+        "trace": 0
+    }]
+}

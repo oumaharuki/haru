@@ -1,0 +1,176 @@
+{{template "header" .}}
+<div class="w1280">
+    <section class="detail_top">
+        <div class="detail_top_con container">
+            <div class="v_path clearfix">当前位置：
+                <a href="/">首页</a>&nbsp;&nbsp;»&nbsp;&nbsp;
+                <a href="javascript:;">
+                    动漫
+                </a>&nbsp;&nbsp;»&nbsp;&nbsp;
+                <a href="/detail/{{.anime.Id}}">{{.anime.Name}}</a>
+            </div>
+            <div class="clearfix">
+                <div class="poster_placeholder">
+                    <div class="v-pic"><img src="{{.anime.Picture}}"
+                                            alt="{{.anime.Name}}"
+                                            style="max-height: 400px"
+                    ><a href="/vod/detail/id/28716.html"
+                                                                      class="v-playBtn"><i></i></a></div>
+                    <p class="p_fun">
+                        <a href="javascript:void(0);" class="mac_ulog" data-type="2" data-mid="1"
+                                        data-id="28716"><i class="iconfont"></i>收藏</a>
+                    </p>
+                </div>
+                <div class="txt_intro_con">
+                    <div class="tit"><h1 class="clearfix">{{.anime.Name}}</h1>
+                        <p class="p_txt"><em class="em_num">{{.anime.EmNum}}</em><em class="hide">播放：<span class="mac_hits hits"
+                                                                                              data-mid="1" data-id="28716"
+                                                                                              data-type="hits">305</span></em>
+                        </p></div>
+                    <ul class="txt_list clearfix">
+                        <li class="clearfix"><em class="em_tit">年代：</em>{{.anime.Year}}&nbsp;&nbsp;&nbsp;<em
+                                class="em_tit">地区：</em>{{.anime.Area}}
+                        </li>
+                        <li class="clearfix"><em class="em_tit">主演：</em>{{.anime.Star}}
+                        </li>
+                        <li class="clearfix"><em class="em_tit">导演：</em>{{.anime.Director}}
+                        </li>
+                    </ul>
+                </div>
+                <style>
+                    .v_con_box .play_num_list{
+                        display: none;
+                    }
+                    .v_con_box .play_num_list:nth-child(1){
+                        display: block;
+                    }
+                </style>
+                <div class="play_source">
+                    <div class="play_source_tab clearfix" id="playNumTab">
+                        <a href="javascript:void(0);" target="_self"
+                                                                             class="cur" rel="nofollow" apiname="kkyun"
+                                                                             id="api_kkyun" alt="酷云播">线路1</a><a
+                            href="javascript:void(0);" target="_self" rel="nofollow" apiname="kkm3u8" id="api_kkm3u8"
+                            alt="酷云m3u8">线路2</a><i class="iLine"></i></div>
+                    <div class="v_con_box">
+                        {{ range $key, $value :=.anime.Drama }}
+
+                        <ul class="play_num_list clearfix">
+                        {{ range $k, $v :=$value }}
+                            <li><a href="/play/{{$v.Id}}">{{$v.Name}}</a></li>
+                        {{ end }}
+                        </ul>
+                        {{ end }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="idetail container">
+        <div class="col-l">
+            <div class="tv-hd v-border"><h2><span>剧情介绍</span></h2></div>
+            <div class="tv-bd">
+                <div class="infor_intro">简介：
+                    <div>
+                        年纪轻轻就崭露头角，在附近一带小有名气的精干冒险者青年迪尔他因某件委托而踏足进入深邃森林，遇到了骨瘦如柴的幼小魔人族少女拉提娜。迪尔无法对留着罪人烙印的拉提娜坐视不管，因而决定成为她的保护者，但——「拉提娜太可爱了，我不想去工作」&nbsp;
+                    </div>
+                    <div>——回过神来，已经完全成了溺爱女儿的傻瓜父亲！？</div>
+                </div>
+            </div>
+            <div class="tv-hd v-border"><h2><span>猜你喜欢</span></h2></div>
+            <div class="tv-bd">
+                <ul class="tv-list tv-hotlist">
+                    <li>
+                        <div class="v-pic"><img data-src="/upload/vod/20181125-6/e96c87cc00f7978950f55a15b1fb1e5f.jpg"
+                                                class="thumb" alt="网路胜利组"
+                                                src="/upload/vod/20181125-6/e96c87cc00f7978950f55a15b1fb1e5f.jpg"
+                                                style="display: block;">
+                            <div class="v-tips">全1集</div>
+                            <a href="/vod/detail/id/16860.html" title="网路胜利组" class="v-playBtn"><i></i></a></div>
+                        <div class="v-txt"><span class="v-tit"><a href="/vod/detail/id/16860.html"
+                                                                  title="网路胜利组">网路胜利组</a></span></div>
+                    </li>
+                    <li>
+                        <div class="v-pic"><img data-src="/upload/vod/20181125-6/a6b4ccd84a33c4367e463782126addb6.jpg"
+                                                class="thumb" alt="战姬绝唱第4季"
+                                                src="/upload/vod/20181125-6/a6b4ccd84a33c4367e463782126addb6.jpg"
+                                                style="display: block;">
+                            <div class="v-tips">全10集</div>
+                            <a href="/vod/detail/id/17120.html" title="战姬绝唱第4季" class="v-playBtn"><i></i></a></div>
+                        <div class="v-txt"><span class="v-tit"><a href="/vod/detail/id/17120.html"
+                                                                  title="战姬绝唱第4季">战姬绝唱第4季</a></span></div>
+                    </li>
+                    <li>
+                        <div class="v-pic"><img data-src="/upload/vod/20181125-6/72c1daa59c404eff33074b514d7a4305.jpg"
+                                                class="thumb" alt="战斗陀螺爆裂第二季"
+                                                src="/upload/vod/20181125-6/72c1daa59c404eff33074b514d7a4305.jpg"
+                                                style="display: block;">
+                            <div class="v-tips">全28集</div>
+                            <a href="/vod/detail/id/17121.html" title="战斗陀螺爆裂第二季" class="v-playBtn"><i></i></a></div>
+                        <div class="v-txt"><span class="v-tit"><a href="/vod/detail/id/17121.html" title="战斗陀螺爆裂第二季">战斗陀螺爆裂第二季</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="v-pic"><img data-src="/upload/vod/20181125-6/2e420fdbd72c99d19d9f37ec6860c9a0.jpg"
+                                                class="thumb" alt="战斗少女高校"
+                                                src="/upload/vod/20181125-6/2e420fdbd72c99d19d9f37ec6860c9a0.jpg"
+                                                style="display: block;">
+                            <div class="v-tips">全10集</div>
+                            <a href="/vod/detail/id/17122.html" title="战斗少女高校" class="v-playBtn"><i></i></a></div>
+                        <div class="v-txt"><span class="v-tit"><a href="/vod/detail/id/17122.html" title="战斗少女高校">战斗少女高校</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="v-pic"><img data-src="/upload/vod/20181125-6/4e90b4fceb2586e474fa18c0abbc9e75.jpg"
+                                                class="thumb" alt="约会大作战第一季"
+                                                src="/upload/vod/20181125-6/4e90b4fceb2586e474fa18c0abbc9e75.jpg"
+                                                style="display: block;">
+                            <div class="v-tips">全13集</div>
+                            <a href="/vod/detail/id/17127.html" title="约会大作战第一季" class="v-playBtn"><i></i></a></div>
+                        <div class="v-txt"><span class="v-tit"><a href="/vod/detail/id/17127.html"
+                                                                  title="约会大作战第一季">约会大作战第一季</a></span></div>
+                    </li>
+                    <li>
+                        <div class="v-pic"><img data-src="/upload/vod/20181125-6/fc5d4f857144017e27b7e4aef7091d48.jpg"
+                                                class="thumb" alt="元气少女缘结神OVA：神明"
+                                                src="/upload/vod/20181125-6/fc5d4f857144017e27b7e4aef7091d48.jpg"
+                                                style="display: block;">
+                            <div class="v-tips">全5集</div>
+                            <a href="/vod/detail/id/17133.html" title="元气少女缘结神OVA：神明" class="v-playBtn"><i></i></a></div>
+                        <div class="v-txt"><span class="v-tit"><a href="/vod/detail/id/17133.html" title="元气少女缘结神OVA：神明">元气少女缘结神OVA：神明</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-r">
+            <div class="tv-hd"><h2>日本 • 热播榜</h2></div>
+            <div class="tv-bd">
+                <ul class="v-rank clearfix">
+                    <li><i class="i-rank_num">1</i><em class="v-num">全集</em><span class="v-tit"><a
+                            href="/vod/detail/id/609.html" title="银魂">银魂</a></span></li>
+                    <li><i class="i-rank_num">2</i><em class="v-num">720集</em><span class="v-tit"><a
+                            href="/vod/detail/id/1909.html" title="火影忍者">火影忍者</a></span></li>
+                    <li><i class="i-rank_num">3</i><em class="v-num">13集</em><span class="v-tit"><a
+                            href="/vod/detail/id/24802.html" title="一拳超人2/一拳超人第二季">一拳超人2/一拳超人第二季</a></span></li>
+                    <li><i class="i-rank_num">4</i><em class="v-num">全14集</em><span class="v-tit"><a
+                            href="/vod/detail/id/14914.html" title="出包王女第四季">出包王女第四季</a></span></li>
+                    <li><i class="i-rank_num">5</i><em class="v-num">10集</em><span class="v-tit"><a
+                            href="/vod/detail/id/1104.html" title="东京食尸鬼/东京喰种第四季">东京食尸鬼/东京喰种第四季</a></span></li>
+                    <li><i class="i-rank_num">6</i><em class="v-num">全12集</em><span class="v-tit"><a
+                            href="/vod/detail/id/12764.html" title="东京食尸鬼/东京喰种第一季">东京食尸鬼/东京喰种第一季</a></span></li>
+                    <li><i class="i-rank_num">7</i><em class="v-num">12集全</em><span class="v-tit"><a
+                            href="/vod/detail/id/430.html" title="一拳超人">一拳超人</a></span></li>
+                    <li><i class="i-rank_num">8</i><em class="v-num">12集</em><span class="v-tit"><a
+                            href="/vod/detail/id/952.html" title="魔装学园H×H">魔装学园H×H</a></span></li>
+                    <li><i class="i-rank_num">9</i><em class="v-num">全24集</em><span class="v-tit"><a
+                            href="/vod/detail/id/1216.html" title="关于我转生后成为史莱姆的那件事">关于我转生后成为史莱姆的那件事</a></span></li>
+                    <li><i class="i-rank_num">10</i><em class="v-num">115集</em><span class="v-tit"><a
+                            href="/vod/detail/id/1427.html" title="火影忍者：博人传之次世代继承者">火影忍者：博人传之次世代继承者</a></span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{{template "footer" .}}

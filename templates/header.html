@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <Title>{{ .title }}</Title>
+    </head>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <body>
+    <div class="w1280">
+        <div class="head">
+           <h1>
+               <a href="/"><img src="/img/logo.png" alt=""></a>
+           </h1>
+            <nav>
+                <a href="/"  class="cur">首页</a>
+                <a href="/">动漫</a>
+            </nav>
+            <form name="formsearch" class="searchform" action="/vod/search.html" method="post" autocomplete="off">
+                <input class="ipt" placeholder="输入影片片名或演员名称。" name="wd" type="text" id="wd" required="">
+                <input type="submit" id="searchbutton" value="" class="hide">
+                <a href="javascript:" class="ibtn" title="搜索" onclick="$('.searchform').submit();">
+                    <!--<i class="iconfont"></i>-->
+                    搜索</a>
+            </form>
+        </div>
+    </div>
+
+

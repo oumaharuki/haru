@@ -1,0 +1,208 @@
+{{template "header" .}}
+<div class="w1280">
+    <section class="imain clearfix">
+        <div class="col">
+            <div class="tv-hd">
+                <h2>日本动漫</h2>
+                <!--<div class="imore">-->
+                    <!--<a href="javascript:;" class="a_change">换一换<i class="iconfont">-->
+                        <!--</i>-->
+                    <!--</a>-->
+                    <!--<a href="/vod/show/area/%E6%97%A5%E6%9C%AC/id/4.html">更多<i class="iconfont">-->
+                    <!--</i>-->
+                    <!--</a>-->
+                <!--</div>-->
+            </div>
+            <div class="tv-bd a_clist">
+                <div class="tv-bd a_clist">
+                    <div class="aclcon1">
+                        {{ range $key, $value :=.jp }}
+                        {{ if eq $key 0}}
+                        <div class="tv-l">
+                            <div class="tvhots">
+                                <div class="v-pic">
+                                    <img data-src="{{$value.Picture}}" class="thumb" alt="{{$value.Name}}"
+                                    src="{{$value.Picture}}"
+                                    style="display: block;">
+                                    <div class="v-tips">{{$value.EmNum}}</div>
+                                    <a href="/detail/{{$value.Id}}" title="{{$value.Name}}" class="v-playBtn"><i></i></a>
+                                </div>
+                                <div class="v-txt">
+                                    <p class="v-tit">
+                                        <em class="em-tit">
+                                            <a href="/detail/{{$value.Id}}" title="{{$value.Name}}">{{$value.Name}}</a>
+                                        </em>
+                                    </p>
+                                    <p class="s-des">主持：
+                                        {{$value.Star}}
+                                    </p>
+                                    <p class="s-des">地区：
+                                        {{$value.Area}}&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                        <div class="tv-r">
+                            <ul class="tv-list">
+                        {{ range $key, $value :=.jp }}
+                            {{ if gt $key 0}}
+                            <li>
+                                <div class="v-pic">
+                                    <img data-src="{{$value.Picture}}" class="thumb" alt="{{$value.Name}}"
+                                         src="{{$value.Picture}}" style="display: block;">
+                                    <div class="v-tips">{{$value.EmNum}}</div>
+                                    <a href="/detail/{{$value.Id}}" title="{{$value.Name}}" class="v-playBtn">
+                                        <i></i>
+                                    </a>
+                                </div>
+                                <div class="v-txt"><span class="v-tit"><a href="/detail/{{$value.Id}}" title="{{$value.Name}}">
+                                            {{$value.Name}}</a></span></div></li>
+                            {{ end }}
+                        {{ end }}
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="imain clearfix">
+        <div class="col">
+            <div class="tv-hd">
+                <h2>国产动漫</h2>
+                <!--<div class="imore">-->
+                <!--<a href="javascript:;" class="a_change">换一换<i class="iconfont">-->
+                <!--</i>-->
+                <!--</a>-->
+                <!--<a href="/vod/show/area/%E6%97%A5%E6%9C%AC/id/4.html">更多<i class="iconfont">-->
+                <!--</i>-->
+                <!--</a>-->
+                <!--</div>-->
+            </div>
+            <div class="tv-bd a_clist">
+                <div class="tv-bd a_clist">
+                    <div class="aclcon1">
+                        {{ range $key, $value :=.gc }}
+                            {{ if eq $key 0}}
+                                <div class="tv-l">
+                                    <div class="tvhots">
+                                        <div class="v-pic">
+                                            <img data-src="{{$value.Picture}}" class="thumb" alt="{{$value.Name}}"
+                                                 src="{{$value.Picture}}"
+                                                 style="display: block;">
+                                            <div class="v-tips">{{$value.EmNum}}</div>
+                                            <a href="/detail/{{$value.Id}}" title="{{$value.Name}}" class="v-playBtn"><i></i></a>
+                                        </div>
+                                        <div class="v-txt">
+                                            <p class="v-tit">
+                                                <em class="em-tit">
+                                                    <a href="/detail/{{$value.Id}}" title="{{$value.Name}}">{{$value.Name}}</a>
+                                                </em>
+                                            </p>
+                                            <p class="s-des">主持：
+                                                {{$value.Star}}
+                                            </p>
+                                            <p class="s-des">地区：
+                                                {{$value.Area}}&nbsp;
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{ end }}
+                        {{ end }}
+                        <div class="tv-r">
+                            <ul class="tv-list">
+                                {{ range $key, $value :=.gc }}
+                                    {{ if gt $key 0}}
+                                        <li>
+                                            <div class="v-pic">
+                                                <img data-src="{{$value.Picture}}" class="thumb" alt="{{$value.Name}}"
+                                                     src="{{$value.Picture}}" style="display: block;">
+                                                <div class="v-tips">{{$value.EmNum}}</div>
+                                                <a href="/detail/{{$value.Id}}" title="{{$value.Name}}" class="v-playBtn">
+                                                    <i></i>
+                                                </a>
+                                            </div>
+                                            <div class="v-txt"><span class="v-tit"><a href="/detail/{{$value.Id}}" title="{{$value.Name}}">
+                                            {{$value.Name}}</a></span></div></li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="imain clearfix">
+        <div class="col">
+            <div class="tv-hd">
+                <h2>欧美动漫</h2>
+                <!--<div class="imore">-->
+                <!--<a href="javascript:;" class="a_change">换一换<i class="iconfont">-->
+                <!--</i>-->
+                <!--</a>-->
+                <!--<a href="/vod/show/area/%E6%97%A5%E6%9C%AC/id/4.html">更多<i class="iconfont">-->
+                <!--</i>-->
+                <!--</a>-->
+                <!--</div>-->
+            </div>
+            <div class="tv-bd a_clist">
+                <div class="tv-bd a_clist">
+                    <div class="aclcon1">
+                        {{ range $key, $value :=.om }}
+                        {{ if eq $key 0}}
+                        <div class="tv-l">
+                            <div class="tvhots">
+                                <div class="v-pic">
+                                    <img data-src="{{$value.Picture}}" class="thumb" alt="{{$value.Name}}"
+                                         src="{{$value.Picture}}"
+                                         style="display: block;">
+                                    <div class="v-tips">{{$value.EmNum}}</div>
+                                    <a href="/detail/{{$value.Id}}" title="{{$value.Name}}" class="v-playBtn"><i></i></a>
+                                </div>
+                                <div class="v-txt">
+                                    <p class="v-tit">
+                                        <em class="em-tit">
+                                            <a href="/detail/{{$value.Id}}" title="{{$value.Name}}">{{$value.Name}}</a>
+                                        </em>
+                                    </p>
+                                    <p class="s-des">主持：
+                                        {{$value.Star}}
+                                    </p>
+                                    <p class="s-des">地区：
+                                        {{$value.Area}}&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                        <div class="tv-r">
+                            <ul class="tv-list">
+                                {{ range $key, $value :=.om }}
+                                {{ if gt $key 0}}
+                                <li>
+                                    <div class="v-pic">
+                                        <img data-src="{{$value.Picture}}" class="thumb" alt="{{$value.Name}}"
+                                             src="{{$value.Picture}}" style="display: block;">
+                                        <div class="v-tips">{{$value.EmNum}}</div>
+                                        <a href="/detail/{{$value.Id}}" title="{{$value.Name}}" class="v-playBtn">
+                                            <i></i>
+                                        </a>
+                                    </div>
+                                    <div class="v-txt"><span class="v-tit"><a href="/detail/{{$value.Id}}" title="{{$value.Name}}">
+                                            {{$value.Name}}</a></span></div></li>
+                                {{ end }}
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{{template "footer" .}}
